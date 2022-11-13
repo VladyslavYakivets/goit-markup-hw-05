@@ -455,20 +455,11 @@ img{
 }
 
 .clients-item{
-  border: 1px solid var(--fill-icon);
-  border-radius: 4px;
   width: calc((100% - 150px) /6);
-  
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-item:not(:last-child){
   margin-right: 30px;
-}
-
-.clients-item:hover,
-.clients-item:focus {
-  border-color: var(--accent-color);
 }
 
 .link-client{
@@ -477,13 +468,17 @@ img{
   align-items:center;
   height: 92px;
   fill: var(--fill-icon);
+  border: 1px solid var(--fill-icon);
+  border-radius: 4px;
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-client:hover,
 .link-client:focus{
   fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 
@@ -700,7 +695,14 @@ img{
 
 .projects {
   text-decoration: none;
+  display: block;
 
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects:hover,
+.projects:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .name-project{
@@ -735,8 +737,6 @@ img{
   width: calc((100% - 60px) /3);
   margin-right: 30px;
   margin-bottom: 30px;
-
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-item:nth-child(3n){
@@ -750,10 +750,6 @@ img{
   padding: 20px;
 }
 
-.card-item:hover,
-.card-item:focus{
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 
 .projects-overley{
   position: relative;
